@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="AnjscaffClient" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "AngularJS Scaffold" %></title>
+    <%= csrf_meta_tags %>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <meta id='csrf' ng-controller="CsrfCtrl".
+      data-csrf="<%= form_authenticity_token%>">
+
+    <!-- <link href="assets/favicon.ico" rel="shortcut icon"> -->
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+
+<script type="text/javascript">
+    var heap=heap||[];heap.load=function(a){window._heapid=a;var b=document.createElement("script");b.type="text/javascript",b.async=!0,b.src=("https:"===document.location.protocol?"https:":"http:")+"//d36lvucg9kzous.cloudfront.net";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}},e=["identify","track"];for(var f=0;f<e.length;f++)heap[e[f]]=d(e[f])};
+    heap.load("890241384");
+</script>
+
+  </head>
+  <body id="home">
+<!-- Navbar
+================================================== -->
+<section id="hero">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-inner">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar icon-white"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="brand" href="#"><i class="logo"></i></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li class="">
+				    <%= link_to "HOME", "/path1"  %>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <!-- templates load here -->
+          <div ng-view class="span9"></div>
+          <!-- templates load here -->
+        </div><!--/row-->
+      </div><!--/content-->
+    </div> <!-- /container -->
+
+
+
+</section>
+
+
+<!-- Footer
+================================================== -->
+<footer class="homeFooter">
+    <div class="container">
+        <ul class="footer-links">
+            <li>&copy; 2013 AngularJs Blog.</li>
+            <li class="muted">|</li>
+	    <li><a href="mailto:rox.shahid@gmail.com?Subject=Hello%20again" target="_top">rox.shahid@gmail.com</a></li>
+	    <li class="muted">|</li>
+            <li><a href="http://myrailsdemo.blogspot.in/">Contact Us</a></li>
+        </ul>
+    </div>
+</footer>
+
+  </body>
+</html>
+
